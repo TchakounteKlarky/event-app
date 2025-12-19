@@ -1,0 +1,16 @@
+{
+  "name": "gestion_etudiants",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    
+    "black" : "tsc",
+    "black-watch" : "tsc --watch",
+    "start" : "tsc && node dist/main.js",
+    "dev" : "tsc --watch"
+  },
+  "keywords": [],
+  "author": "black-satrs",
+  "license": "ISC",
+  "description": ""
+}
