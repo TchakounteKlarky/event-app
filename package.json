@@ -7,7 +7,7 @@
     "black" : "tsc",
     "black-watch" : "tsc --watch",
     "start" : "tsc && node dist/main.js",
-    "dev" : "tsc --watch"
+    "black-dev" : "tsc --watch"
   },
   "keywords": [],
   "author": "black-satrs",
