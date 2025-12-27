@@ -18,9 +18,9 @@ Le projet met en pratique :
 
 
 # 📸 Capture d'ecran
--![alt text](ui_de_creation_d_un_evenement.png)
--![alt text](ui_de_filtre_des_eveneements.png)
--![alt text](ui_d_inscriptions.png)
+-![alt text](screen_shot/ui_de_creation_d_un_evenement.png)
+-![alt text](screen_shot/ui_de_filtre_des_eveneements.png)
+-![alt text](screen_shot/ui_d_inscriptions.png)
 
 
 # ✨ Fonctionnalités
