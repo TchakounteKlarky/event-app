@@ -7,9 +7,7 @@ export class InscriptionRepositories{
 
     getAll() : Inscription[]{return [...this.inscriptions];}
 
-    getAllById(id : string){
-        
-    }
+    
     add(insc : Inscription){this.inscriptions.push(insc);}
     
     delete(idEvent : string, idUser: string){

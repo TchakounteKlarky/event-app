@@ -54,26 +54,26 @@ export class InscriptionsServices{
         return this.suscibeRepo.getAll();
     }
 
-    unsubscribedUser(userId : string,eventId : string){
-        const insc = this.suscibeRepo.exists(userId,eventId);
-        if(!insc) return {success : false,message : 'Cet utilisateur n\'est pas inscrit.'};
-        const deleted = this.suscibeRepo.delete(userId,eventId);
-        if(deleted) return {success : false, message : 'desinscription reussie.'};
-        return{success : true,message : 'Erreur lors de la desiscription'};
-    }
+    // unsubscribedUser(userId : string,eventId : string){
+    //     const insc = this.suscibeRepo.exists(userId,eventId);
+    //     if(!insc) return {success : false,message : 'Cet utilisateur n\'est pas inscrit.'};
+    //     const deleted = this.suscibeRepo.delete(userId,eventId);
+    //     if(deleted) return {success : false, message : 'desinscription reussie.'};
+    //     return{success : true,message : 'Erreur lors de la desiscription'};
+    // }
 
-    ObtainInscPerEvent(idUser : string) : Array<{inscription : Inscription,event : any}>{
-        const insc = this.suscibeRepo.findUserById(idUser);
+    // ObtainInscPerEvent(idUser : string) : Array<{inscription : Inscription,event : any}>{
+    //     const insc = this.suscibeRepo.findUserById(idUser);
         
-        return insc.map(insc =>({
-            inscription : insc,
-            event : this.eventRepo.findById(idUser)
-        }))
-    }
+    //     return insc.map(insc =>({
+    //         inscription : insc,
+    //         event : this.eventRepo.findById(idUser)
+    //     }))
+    // }
 
-    hasSubscribed(userId : string,eventId : string) : boolean{
-        return this.suscibeRepo.exists(userId,eventId);
-    }
+    // hasSubscribed(userId : string,eventId : string) : boolean{
+    //     return this.suscibeRepo.exists(userId,eventId);
+    // }
 
 
 }

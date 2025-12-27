@@ -275,7 +275,7 @@ npm run black-watch
 Compiler en continu (détecte les changements)
 npm start
 Compiler + Exécuter
-npm run dev
+npm run black-dev
 Mode développement (recompilation auto)
 npm run serve
 Lancer un serveur HTTP local

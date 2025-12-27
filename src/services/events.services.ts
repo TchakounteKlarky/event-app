@@ -81,18 +81,18 @@ export class EventsServices {
         return event.capacite >= nbrInsc;
     }
 
-    deleteEvent(eventId : string){
-        const event = this.evtRepo.findById(eventId);
-        if(!event) return{success : false,message : 'Evenement introuvable'}
-        const nbr = this.suscribeRepo.countInscriptions(eventId);
-        if(nbr >0){
-            return{
-                success : false,
-                message : 'Cet evenement a des inscriptions en cours.'
-            }
-        }
-        const titre = event.titre
-        this.evtRepo.delete(event.id);
-        return{success : true, message : `${titre} supprime avec succes.`};
-    }
+    // deleteEvent(eventId : string){
+    //     const event = this.evtRepo.findById(eventId);
+    //     if(!event) return{success : false,message : 'Evenement introuvable'}
+    //     const nbr = this.suscribeRepo.countInscriptions(eventId);
+    //     if(nbr >0){
+    //         return{
+    //             success : false,
+    //             message : 'Cet evenement a des inscriptions en cours.'
+    //         }
+    //     }
+    //     const titre = event.titre
+    //     this.evtRepo.delete(event.id);
+    //     return{success : true, message : `${titre} supprime avec succes.`};
+    // }
 }

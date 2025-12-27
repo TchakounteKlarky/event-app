@@ -20,7 +20,7 @@ export class UserServices {
             return {success: false,message : 'le nom est obligatoire.'};
         }
         console.log(validationsMail(email,this.DOMAINE));
-        if(!validationsMail(email,this.DOMAINE)){
+        if(validationsMail(email,this.DOMAINE)){
             return {success : false,message : 'le domaine de l\'addresse est invalide.'};
         }
         const mail = this.userRepos.findByMail(email);
@@ -49,7 +49,7 @@ export class UserServices {
         return {success : true,message : 'Utilisateur creé avec success',user};
     }
 
-    findById(id : string): User|undefined{return this.userRepos.findById(id);}
+    //findById(id : string): User|undefined{return this.userRepos.findById(id);}
 
     getAll(){return this.userRepos.getAll();}
 }
