@@ -2,6 +2,8 @@
 node_modules/
 
 # Fichiers compilés
-*.js
-*.js.map
+
+# dist/ ce dossier  aurait du etre ignorer car il est généré automatiquement à la compilation mais il fait partie des repertoires exigés par le tp
+# *.js
+# *.js.map
 
