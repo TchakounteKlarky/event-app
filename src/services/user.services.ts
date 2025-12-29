@@ -4,7 +4,7 @@ import {isEmpty, validationsMail } from "../utils/validations.js";
 import { User } from "../models/User.js";
 
 export class UserServices {
-    private readonly DOMAINE = 'saintjeaningenieur.org';
+    //private readonly DOMAINE = "@saintjeaningenieur.org";
     constructor(
         private userRepos : UserRpositories
 
@@ -19,8 +19,8 @@ export class UserServices {
         if(isEmpty(nom)){
             return {success: false,message : 'le nom est obligatoire.'};
         }
-        console.log(validationsMail(email,this.DOMAINE));
-        if(validationsMail(email,this.DOMAINE)){
+        console.log(`validation: ${validationsMail(email)}`);
+        if(!validationsMail(email)){
             return {success : false,message : 'le domaine de l\'addresse est invalide.'};
         }
         const mail = this.userRepos.findByMail(email);

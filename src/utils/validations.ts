@@ -1,7 +1,8 @@
 
-export function validationsMail(mail : string,domaine : string) : boolean{
-    const regex = new RegExp(`^[a-zA-Z0-9._%+-]+@${domaine.replace(/\./g,'\\.')}$`);
-    return regex.test(mail);
+export function validationsMail(mail : string) : boolean{
+    //const regex = new RegExp(`^[a-zA-Z0-9._%+-]+@${domaine.replace(/\./g,'\\.')}$`);
+    return mail.trim().endsWith("@saintjeaningenieur.org");
+    //return regex.test(mail);
 }
 
 export function isEmpty(chaine : string):boolean{

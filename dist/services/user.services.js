@@ -3,7 +3,7 @@ import { isEmpty, validationsMail } from "../utils/validations.js";
 export class UserServices {
     constructor(userRepos) {
         this.userRepos = userRepos;
-        this.DOMAINE = 'saintjeaningenieur.org';
+        this.DOMAINE = "@saintjeaningenieur.org";
     }
     createUser(email, nom) {
         if (isEmpty(email)) {
@@ -12,8 +12,8 @@ export class UserServices {
         if (isEmpty(nom)) {
             return { success: false, message: 'le nom est obligatoire.' };
         }
-        console.log(validationsMail(email, this.DOMAINE));
-        if (validationsMail(email, this.DOMAINE)) {
+        console.log(`validation: ${validationsMail(email)}`);
+        if (!validationsMail(email)) {
             return { success: false, message: 'le domaine de l\'addresse est invalide.' };
         }
         const mail = this.userRepos.findByMail(email);
